@@ -8,7 +8,7 @@ body {
   text-align: center;
 }
 @font-face {
-  font-family: "Strasua";
+  font-family: "strasua-regular", sans-serif;
   src: url("assets/strasua/strasua.ttf") format("truetype");
 }
 
@@ -18,9 +18,7 @@ h1 {
   z-index: 1;
   color: #fff;
   text-decoration: underline;
-  font-family: "Strasua", Arial, sans-serif;
-  color: black;
-  text-shadow: 2px 2px 4px white;
+  font-family: “strasua-regular”, sans-serif; ";
 }
 
 form {
@@ -117,6 +115,7 @@ video {
 img {
   max-width: 100%;
   height: auto;
+  width: 60%;
 }
 
 .planetError {
@@ -133,18 +132,11 @@ img {
 }
 
 h2,
-label,
 h3,
 p {
   color: white;
 }
 
-h3 {
-  font-style: italic;
-}
-h2 {
-  color: black;
-  text-shadow: 2px 2px 4px white;
-  text-align: center;
-  font-family: "Strasua", Arial, sans-serif;
+H3 {
+  text-;
 }

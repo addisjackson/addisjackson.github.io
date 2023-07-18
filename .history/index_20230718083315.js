@@ -1,3 +1,4 @@
+// Planet information object
 const searchedPlanet = [{
   name: "Yavin IV",
   synopsis: "The surface of Yavin 4 was divided into several continental masses, two of which were Starloft and Wetyin. Notable natural formations included Massassi Valley, Skygazer Hill, and the Ferra Groves. The verdant world had a comfortable, temperate climate but a challenging ecosystem and dangerous predators.The moon's landmasses were covered by dense jungles and rain forests whose flora included purple-barked Massassi trees, grenade fungi, bioluminescent orchids, and climbing ferns. Yavin 4 also had swampy areas. The moon, however, was completely lacking in any mineral resources of significance.",
@@ -60,75 +61,72 @@ const searchedPlanet = [{
 }
 ];
 
-
-const planetInput = document.getElementById('planetSearch');
-
 document.getElementById("searchForm").addEventListener("submit", function (event) {
-  event.preventDefault();
+event.preventDefault();
 
-  const searchedPlanet = planetInput.value.toLowerCase();
-  const apiUrl = "https://swapi.dev/api/planets/";
-  const searchParams = `?search=${searchedPlanet}`;
+const searchedPlanet = planetInput.value.toLowerCase();
+const apiUrl = "https://swapi.dev/api/planets/";
+const searchParams = `?search=${searchedPlanet}`;
 
-  fetch(apiUrl + searchParams)
-    .then((response) => {
-      return response.json();
-    })
-    .then(data => {
-      const planet = data.results[0];
+fetch(apiUrl + searchParams)
+  .then((response) => {
+    return response.json();
+  })
+  .then(data => {
+    const planet = data.results[0];
 
-      if (typeof planet === undefined) {
-        showError();
-      } else {
-        renderPlanet(planet);
-      }
-    });
+    if (planet) {
+      renderPlanet(planet);
+    } else {
+      showError();
+    }
+  });
 });
 
 const planetSection = document.querySelector(".planet-section");
 
 function renderPlanet(planet) {
-  // Clear previous planet elements
-  planetSection.innerHTML = '';
+// Clear previous planet elements
+planetSection.innerHTML = '';
 
-  const planetElement = document.createElement("div");
-  const planetName = document.createElement("h2");
-  planetName.classList.add("planetName");
-  planetName.innerText = planet.name;
-  planetElement.appendChild(planetName);
+const planetElement = document.createElement("div");
+const planetName = document.createElement("h2");
+planetName.classList.add("planetName");
+planetName.innerText = planet.name;
+planetElement.appendChild(planetName);
 
-  const planetInfo = document.createElement("p");
-  planetInfo.classList.add("planetInfo");
-  planetInfo.innerText = searchedPlanet.find(p => p.name.toLowerCase() === planet.name.toLowerCase())?.synopsis || "No info collected";
-  planetElement.appendChild(planetInfo);
+const planetInfo = document.createElement("p");
+planetInfo.classList.add("planetInfo");
+planetInfo.innerText = searchedPlanet.find(p => p.name.toLowerCase() === planet.name.toLowerCase())?.synopsis || "No info collected";
+planetElement.appendChild(planetInfo);
 
-  const planetImage = document.createElement("img");
-  planetImage.src = searchedPlanet.find(p => p.name.toLowerCase() === planet.name.toLowerCase())?.image || "assets/placeholder.jpg";
-  planetElement.appendChild(planetImage);
-  planetSection.appendChild(planetElement);
+const planetImage = document.createElement("img");
+planetImage.src = searchedPlanet.find(p => p.name.toLowerCase() === planet.name.toLowerCase())?.image || "assets/placeholder.jpg";
+planetInfo.appendChild(planetImage);
 
-  showHiddenButton()
-
+planetSection.appendChild(planetElement);
 }
 
 function showError() {
-  // Clear previous error message and planet elements
-  planetSection.innerHTML = '';
+// Clear previous error message and planet elements
+planetSection.innerHTML = '';
 
-  const planetError = document.createElement("div");
-  planetError.classList.add("planetError");
-  const errorText = document.createElement("p");
-  errorText.classList.add("errorText");
-  errorText.innerText = "No flights found to this planet. Please check back in the future as we are always expanding our service area.";
-  planetError.appendChild(errorText);
-  planetSection.appendChild(planetError);
+const planetError = document.createElement("div");
+planetError.classList.add("planetError");
+const errorText = document.createElement("p");
+errorText.classList.add("errorText");
+errorText.innerText = "No flights found to this planet. Please check back in the future as we are always expanding our service area.";
+planetError.appendChild(errorText);
+planetSection.appendChild(planetError);
+
+showHiddenButton();
 }
 
-function showHiddenButton(label) {
-  const hiddenButton = document.createElement("button");
+
+function showHiddenButton () {
+  let hiddenButton = document.createElement("button");
   hiddenButton.classList.add("hiddenButton");
-  hiddenButton.textContent = label;
-  planetSection.appendChild(hiddenButton);
+  hiddenButton.textContent = "`Select ${planet.name}`";
   hiddenButton.style.display = "block";
-  hiddenButton.textContent = "Select " + `${planet.name}`;
+  hiddenButton.innerHTML = `Select ${planet.name}`;
 }

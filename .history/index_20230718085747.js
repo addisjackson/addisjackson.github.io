@@ -90,7 +90,8 @@ const planetSection = document.querySelector(".planet-section");
 function renderPlanet(planet) {
   // Clear previous planet elements
   planetSection.innerHTML = '';
-
+  const planetContainer = document.createElement('div');
+  planetContainer.classList.add('planet-container');
   const planetElement = document.createElement("div");
   const planetName = document.createElement("h2");
   planetName.classList.add("planetName");
@@ -104,11 +105,9 @@ function renderPlanet(planet) {
 
   const planetImage = document.createElement("img");
   planetImage.src = searchedPlanet.find(p => p.name.toLowerCase() === planet.name.toLowerCase())?.image || "assets/placeholder.jpg";
-  planetElement.appendChild(planetImage);
-  planetSection.appendChild(planetElement);
-
-  showHiddenButton()
-
+  planetContainer.appendChild(planetImage);
+  planetContainer.appendChild(planetElement);
+  planetSection.appendChild(planetContainer);
 }
 
 function showError() {
@@ -128,7 +127,8 @@ function showHiddenButton(label) {
   const hiddenButton = document.createElement("button");
   hiddenButton.classList.add("hiddenButton");
   hiddenButton.textContent = label;
+  hiddenButton.addEventListener("click", showSelected);
   planetSection.appendChild(hiddenButton);
   hiddenButton.style.display = "block";
-  hiddenButton.textContent = "Select " + `${planet.name}`;
+  hiddenButton.innerHTML = Select + "`${planet.name}`";
 }

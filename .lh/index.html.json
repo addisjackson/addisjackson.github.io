@@ -1,0 +1,58 @@
+{
+    "sourceFile": "index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1689682288740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689682757387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   <meta charset=\"UTF-8\">\n   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Addis' Galactic Flight</title>\n-  <link rel=\"stylesheet\" href=\"style.css\">\n+  <link rel=\"stylesheet\" href=\"./style.css\">\n   <script defer src=\"index.js\"></script>\n </head>\n <body>\n   <div class=\"background-video\">\n"
+                },
+                {
+                    "date": 1689683759904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,8 @@\n       <button type=\"reset\" id=\"resetButton\">Reset</button>\n     </div>\n   </form>\n   <section class=\"planet-section\">\n-    <!-- Planet information will be rendered here -->\n+ \n   </section>\n </body>\n </html>\n"
+                },
+                {
+                    "date": 1689684722963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n <head>\n   <meta charset=\"UTF-8\">\n   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n-  <title>Addis' Galactic Flight</title>\n-  <link rel=\"stylesheet\" href=\"./style.css\">\n+  <title>Addis' Galactic Getaways</title>\n+  <link rel=\"stylesheet\" href=\"style.css\">\n   <script defer src=\"index.js\"></script>\n </head>\n <body>\n   <div class=\"background-video\">\n"
+                },
+                {
+                    "date": 1689685298897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+<!DOCTYPE html>\n+<html lang=\"en\">\n+<head>\n+  <meta charset=\"UTF-8\">\n+  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n+  <title>Addis' Galactic Getaways</title>\n+  <link rel=\"stylesheet\" href=\"style.css\">\n+  <script defer src=\"index.js\"></script>\n+</head>\n+<body>\n+\n+  <h1>Addis' Galactic Flights to the Stars (Wars)</h1>\n+  <form id=\"searchForm\">\n+    <h2>Search For Flights To Your Desired Planet Here:</h2>\n+    <div class=\"name\">\n+      <label for=\"planetSearch\">Planet Name</label>\n+      <input type=\"text\" name=\"planetSearch\" id=\"planetSearch\" placeholder=\"Enter planet name\">\n+    </div>\n+    <div class=\"buttons\">\n+      <button type=\"submit\" id=\"searchButton\">Search</button>\n+      <button type=\"reset\" id=\"resetButton\">Reset</button>\n+    </div>\n+  </form>\n+  <section class=\"planet-section\">\n+ \n+  </section>\n+</body>\n+</html>\n"
+                },
+                {
+                    "date": 1689685727529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,13 @@\n   <link rel=\"stylesheet\" href=\"style.css\">\n   <script defer src=\"index.js\"></script>\n </head>\n <body>\n+  <div class=\"background-video\">\n+    <video autoplay loop muted>\n+      <source src=\"assets/addis_app.mp4\" type=\"video/mp4\">\n+    </video>\n+  </div>\n \n   <h1>Addis' Galactic Flights to the Stars (Wars)</h1>\n   <form id=\"searchForm\">\n     <h2>Search For Flights To Your Desired Planet Here:</h2>\n@@ -22,8 +27,8 @@\n       <button type=\"reset\" id=\"resetButton\">Reset</button>\n     </div>\n   </form>\n   <section class=\"planet-section\">\n- \n+   \n   </section>\n </body>\n </html>\n"
+                },
+                {
+                    "date": 1689686342460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n       <source src=\"assets/addis_app.mp4\" type=\"video/mp4\">\n     </video>\n   </div>\n \n-  <h1>Addis' Galactic Flights to the Stars (Wars)</h1>\n+  <h1>Addis' Galactic Getaways</h1>\n+  <h3> we fly you to the stars (wars)</h3>\n   <form id=\"searchForm\">\n     <h2>Search For Flights To Your Desired Planet Here:</h2>\n     <div class=\"name\">\n       <label for=\"planetSearch\">Planet Name</label>\n"
+                },
+                {
+                    "date": 1689686686969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,11 @@\n   <meta charset=\"UTF-8\">\n   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Addis' Galactic Getaways</title>\n-  <link rel=\"stylesheet\" href=\"style.css\">\n+  <<link href=\"https://www.dafontfree.net/embed/c3RyYXN1YS1yZWd1bGFyJmRhdGEvOS9zLzUyMDgwL3N0cmFzdWEudHRm\" rel=\"stylesheet\" type=\"text/css\"/>\n   <script defer src=\"index.js\"></script>\n+\n </head>\n <body>\n   <div class=\"background-video\">\n     <video autoplay loop muted>\n@@ -32,38 +33,4 @@\n    \n   </section>\n </body>\n </html>\n-<!DOCTYPE html>\n-<html lang=\"en\">\n-<head>\n-  <meta charset=\"UTF-8\">\n-  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n-  <title>Addis' Galactic Getaways</title>\n-  <link rel=\"stylesheet\" href=\"style.css\">\n-  <script defer src=\"index.js\"></script>\n-</head>\n-<body>\n-  <div class=\"background-video\">\n-    <video autoplay loop muted>\n-      <source src=\"assets/addis_app.mp4\" type=\"video/mp4\">\n-    </video>\n-  </div>\n-\n-  <h1>Addis' Galactic Flights to the Stars (Wars)</h1>\n-  <form id=\"searchForm\">\n-    <h2>Search For Flights To Your Desired Planet Here:</h2>\n-    <div class=\"name\">\n-      <label for=\"planetSearch\">Planet Name</label>\n-      <input type=\"text\" name=\"planetSearch\" id=\"planetSearch\" placeholder=\"Enter planet name\">\n-    </div>\n-    <div class=\"buttons\">\n-      <button type=\"submit\" id=\"searchButton\">Search</button>\n-      <button type=\"reset\" id=\"resetButton\">Reset</button>\n-    </div>\n-  </form>\n-  <section class=\"planet-section\">\n- \n-  </section>\n-</body>\n-</html>\n"
+                },
+                {
+                    "date": 1689686759733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n   <meta charset=\"UTF-8\">\n   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Addis' Galactic Getaways</title>\n-  <<link href=\"https://www.dafontfree.net/embed/c3RyYXN1YS1yZWd1bGFyJmRhdGEvOS9zLzUyMDgwL3N0cmFzdWEudHRm\" rel=\"stylesheet\" type=\"text/css\"/>\n+  <link href=\"https://www.dafontfree.net/embed/c3RyYXN1YS1yZWd1bGFyJmRhdGEvOS9zLzUyMDgwL3N0cmFzdWEudHRm\"\n+  rel=\"stylesheet\" type=\"text/css\"/>\n   <script defer src=\"index.js\"></script>\n \n </head>\n <body>\n"
+                },
+                {
+                    "date": 1689687077833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Addis' Galactic Getaways</title>\n   <link href=\"https://www.dafontfree.net/embed/c3RyYXN1YS1yZWd1bGFyJmRhdGEvOS9zLzUyMDgwL3N0cmFzdWEudHRm\"\n-  rel=\"stylesheet\" type=\"text/css\"/>\n+  rel=\"stylesheet\" type=\"text/css\"/ href=\"style.css\">\n   <script defer src=\"index.js\"></script>\n \n </head>\n <body>\n"
+                },
+                {
+                    "date": 1689687233985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,9 @@\n   <meta charset=\"UTF-8\">\n   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Addis' Galactic Getaways</title>\n-  <link href=\"https://www.dafontfree.net/embed/c3RyYXN1YS1yZWd1bGFyJmRhdGEvOS9zLzUyMDgwL3N0cmFzdWEudHRm\"\n-  rel=\"stylesheet\" type=\"text/css\"/ href=\"style.css\">\n+  <link rel=\"stylesheet\" type=\"text/css\"/ href=\"style.css\">\n   <script defer src=\"index.js\"></script>\n \n </head>\n <body>\n"
+                }
+            ],
+            "date": 1689682288740,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Addis' Galactic Flight</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script defer src=\"index.js\"></script>\n</head>\n<body>\n  <div class=\"background-video\">\n    <video autoplay loop muted>\n      <source src=\"assets/addis_app.mp4\" type=\"video/mp4\">\n    </video>\n  </div>\n\n  <h1>Addis' Galactic Flights to the Stars (Wars)</h1>\n  <form id=\"searchForm\">\n    <h2>Search For Flights To Your Desired Planet Here:</h2>\n    <div class=\"name\">\n      <label for=\"planetSearch\">Planet Name</label>\n      <input type=\"text\" name=\"planetSearch\" id=\"planetSearch\" placeholder=\"Enter planet name\">\n    </div>\n    <div class=\"buttons\">\n      <button type=\"submit\" id=\"searchButton\">Search</button>\n      <button type=\"reset\" id=\"resetButton\">Reset</button>\n    </div>\n  </form>\n  <section class=\"planet-section\">\n    <!-- Planet information will be rendered here -->\n  </section>\n</body>\n</html>\n"
+        }
+    ]
+}

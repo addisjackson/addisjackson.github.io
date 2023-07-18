@@ -1,0 +1,26 @@
+{
+    "sourceFile": "extra.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1689668516430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689669438941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,12 @@\n     .then((response) => {\n          return response.json();\n   })\n  .then(data => {\n-    const planet = data.results[0]\n-    const names = data.results.name;\n-    for(name of names)\n-    return \n\\ No newline at end of file\n+    let names = []\n+    const planets = data.results\n+    for(planet of planets) {\n+    names.push(planet.name)\n+    return names  \n+    }\n+ })\n+ console.log(names) \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1689669887994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,10 @@\n let apiUrl = \"https://swapi.dev/api/planets/\";\n-let searchedPlanet = document.getElementById(\"planetSearch\").value;\n   fetch(apiUrl + searchParams)\n     .then((response) => {\n          return response.json();\n   })\n  .then(data => {\n-    let names = []\n-    const planets = data.results\n-    for(planet of planets) {\n-    names.push(planet.name)\n-    return names  \n-    }\n- })\n- console.log(names) \n\\ No newline at end of file\n+    names.map((name) => encodeURIComponent(name)).join(\"&\")}\n+    \n+  ); \n+    \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1689668516430,
+            "name": "Commit-0",
+            "content": "let apiUrl = \"https://swapi.dev/api/planets/\";\nlet searchedPlanet = document.getElementById(\"planetSearch\").value;\n  fetch(apiUrl + searchParams)\n    .then((response) => {\n         return response.json();\n  })\n .then(data => {\n    const planet = data.results[0]\n    const names = data.results.name;\n    for(name of names)\n    return "
+        }
+    ]
+}

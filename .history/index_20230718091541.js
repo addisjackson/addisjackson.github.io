@@ -107,8 +107,6 @@ function renderPlanet(planet) {
   planetElement.appendChild(planetImage);
   planetSection.appendChild(planetElement);
 
-  showHiddenButton()
-
 }
 
 function showError() {
@@ -128,7 +126,8 @@ function showHiddenButton(label) {
   const hiddenButton = document.createElement("button");
   hiddenButton.classList.add("hiddenButton");
   hiddenButton.textContent = label;
+  hiddenButton.addEventListener("click", showSelected);
   planetSection.appendChild(hiddenButton);
   hiddenButton.style.display = "block";
-  hiddenButton.textContent = "Select " + `${planet.name}`;
+  hiddenButton.innerHTML = Select + "`${planet.name}`";
 }
