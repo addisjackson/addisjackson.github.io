@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Price/style.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1689804716348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1689804716348,
+            "name": "Commit-0",
+            "content": "body {\n    font-family: Arial, sans-serif;\n    margin: 0;\n    padding: 0;\n  }\n  \n  header {\n    background-color: #333;\n    color: #fff;\n    padding: 20px;\n    text-align: center;\n  }\n  \n  main {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n    padding: 20px;\n  }\n  \n  section {\n    background-color: #f2f2f2;\n    padding: 20px;\n  }\n  \n  h2 {\n    margin-top: 0;\n  }\n  \n  .booking-form {\n    grid-column: 1 / 2;\n  }\n  \n  .form-row {\n    margin-bottom: 10px;\n  }\n  \n  label {\n    display: block;\n    font-weight: bold;\n  }\n  \n  input[type=\"number\"] {\n    width: 60px;\n  }\n  \n  button[type=\"submit\"] {\n    background-color: #333;\n    color: #fff;\n    padding: 8px 16px;\n    border: none;\n    cursor: pointer;\n  }\n  \n  .flight-results {\n    grid-column: 2 / 3;\n  }\n  \n  #flightTable {\n    width: 100%;\n  }\n  \n  #flightTable th,\n  #flightTable td {\n    padding: 8px;\n    text-align: center;\n  }\n  \n  footer {\n    background-color: #333;\n    color: #fff;\n    padding: 20px;\n    text-align: center;\n  }\n  \n  #printTicket {\n    background-color: #333;\n    color: #fff;\n    padding: 8px 16px;\n    border: none;\n    cursor: pointer;\n  }\n  \n  #ticketContainer {\n    margin-top: 20px;\n    text-align: center;\n    display: none;\n  }\n  "
+        }
+    ]
+}

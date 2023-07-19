@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+section {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.booking-form {
+  grid-column: 1 / 2;
+}
+
+.form-row {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 60px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.flight-results {
+  grid-column: 2 / 3;
+}
+
+#flightTable {
+  width: 100%;
+}
+
+#flightTable th,
+#flightTable td {
+  padding: 8px;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#printTicket {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#ticketContainer {
+  margin-top: 20px;
+  text-align: center;
+  display: none;
+}
