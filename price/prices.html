@@ -1,10 +1,90 @@
 <!DOCTYPE html>
-<http lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Prices and Rates</title>
-    </head>
-</http>
-<
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Flight Booking</h1>
+  </header>
+
+  <main>
+    <section class="booking-form">
+      <h2>Flight Booking Form</h2>
+      <form id="flightForm">
+        <div class="form-row">
+          <label for="origin">Origin</label>
+          <select name="origin" id="origin">
+            <!-- Populate options dynamically from API -->
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="destination">Destination</label>
+          <select name="destination" id="destination">
+            <!-- Populate options dynamically from API -->
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="passengerType">Passenger Type</label>
+          <select name="passengerType" id="passengerType">
+            <option value="adult">Adult</option>
+            <option value="child">Child</option>
+            <option value="senior">Senior Citizen</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="flightType">Flight Type</label>
+          <select name="flightType" id="flightType">
+            <option value="oneway">One Way</option>
+            <option value="roundtrip">Round Trip</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="seatClass">Seat Class</label>
+          <select name="seatClass" id="seatClass">
+            <option value="economy">Economy Class</option>
+            <option value="business">Business Class</option>
+            <option value="first">First Class</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="passengerCount">Passenger Count</label>
+          <input type="number" name="passengerCount" id="passengerCount" min="1" value="1">
+        </div>
+        <div class="form-row">
+          <button type="submit">Search Flights</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="flight-results">
+      <h2>Flight Results</h2>
+      <table id="flightTable">
+        <thead>
+          <tr>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Flight Type</th>
+            <th>Seat Class</th>
+            <th>Passenger Count</th>
+            <th>Total Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Flight results will be dynamically populated here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <button id="printTicket">Print Ticket</button>
+    <div id="ticketContainer"></div>
+  </footer>
+</body>
+</html>

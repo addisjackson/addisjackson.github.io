@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Price/prices.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1690064232795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1690064670195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,11 @@\n         <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n         <title>Prices and Rates</title>\n     </head>\n     <body>\n-\n-        \\<embed>\n+        <embed>\n+            <div>\n+                <iframe src=\"https://d1csarkz8obe9u.cloudfront.net/index.php/posterbuilder/view/f82bd1fcd29cbf7f59824a44cb914a24/1\" style=\"height: 800px; width:100%; border:none;\"></iframe>\n+            </div>\n+        </embed>\n     </body>\n </http>\n"
+                }
+            ],
+            "date": 1690064232795,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<http lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n        <title>Prices and Rates</title>\n    </head>\n    <body>\n\n        \\<embed>\n    </body>\n</http>\n"
+        }
+    ]
+}

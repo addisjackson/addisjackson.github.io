@@ -132,3 +132,8 @@ function showHiddenButton(label) {
   hiddenButton.style.display = "block";
   hiddenButton.textContent = "Select " + `${planet.name}`;
 }
+
+const hiddenButton = document.getElementById("hiddenButton");
+hiddenButton.addEventListener("click", function() {
+  window.location.href = "./price/price.html";
+});
