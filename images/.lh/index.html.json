@@ -1,0 +1,34 @@
+{
+    "sourceFile": "index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1689614985285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689619923880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,8 @@\n        <div class=\"name\">\n               <label for=\"planetSearch\"> Planet Name</label>\n               <input type=\"text\" name=\"planetSearch\" id=\"planetSearch\" placeholder=\"type plabnet here\"/>\n         </div>\n-        <div for=\"planetInfo\" id=\"planetInfo\">\n-\n-        </div>\n-        <div for=\"planetImage\" id=\"planetImage\">\n-          <img id=\"planetImage\" src=\"assets/placeholder.jpg\" alt=\"Planet Image\">\n-        </div>\n         <div class=\"buttons\">\n           <button type=\"submit\" id=\"searchButton\">Search</button>\n           <button type=\"reset\" id=\"resetButton\">Reset</button>\n         </div>  \n"
+                },
+                {
+                    "date": 1689622399951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,28 +1,27 @@\n <!DOCTYPE html>\n <html lang=\"en\">\n-  <head>\n-    <meta charset=\"UTF-8\" />\n-    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n-    <title>Addis' Galactic Flight</title>\n-    <script defer src=\"index.js\"></script>\n-    <link rel=\"stylesheet\" href=\"style.css\"/>\n-  </head>\n-  <body>\n-    <h1>Addis' Galactic Flights to the Stars (wars)</h1>\n-      <form id=\"searchForm\">\n-        <h2>Search For Flights To Your Desired Planet Here:</h2>\n-       <div class=\"name\">\n-              <label for=\"planetSearch\"> Planet Name</label>\n-              <input type=\"text\" name=\"planetSearch\" id=\"planetSearch\" placeholder=\"type plabnet here\"/>\n-        </div>\n-        <div class=\"buttons\">\n-          <button type=\"submit\" id=\"searchButton\">Search</button>\n-          <button type=\"reset\" id=\"resetButton\">Reset</button>\n-        </div>  \n-    </form>\n-   <section class=\"planet-section\">\n-   </section>\n-\n-  </body>\n+<head>\n+  <meta charset=\"UTF-8\">\n+  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n+  <title>Addis' Galactic Flight</title>\n+  <link rel=\"stylesheet\" href=\"style.css\">\n+  <script defer src=\"index.js\"></script>\n+</head>\n+<body>\n+  <h1>Addis' Galactic Flights to the Stars (Wars)</h1>\n+  <form id=\"searchForm\">\n+    <h2>Search For Flights To Your Desired Planet Here:</h2>\n+    <div class=\"name\">\n+      <label for=\"planetSearch\">Planet Name</label>\n+      <input type=\"text\" name=\"planetSearch\" id=\"planetSearch\" placeholder=\"Enter planet name\">\n+    </div>\n+    <div class=\"buttons\">\n+      <button type=\"submit\" id=\"searchButton\">Search</button>\n+      <button type=\"reset\" id=\"resetButton\">Reset</button>\n+    </div>\n+  </form>\n+  <section class=\"planet-section\">\n+  </section>\n+</body>\n </html>\n"
+                },
+                {
+                    "date": 1689626198122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n </head>\n <body>\n   <h1>Addis' Galactic Flights to the Stars (Wars)</h1>\n   <form id=\"searchForm\">\n-    <h2>Search For Flights To Your Desired Planet Here:</h2>\n+    <h2 id=\"searchPlanet\">Search For Flights To Your Desired Planet Here:</h2>\n     <div class=\"name\">\n       <label for=\"planetSearch\">Planet Name</label>\n       <input type=\"text\" name=\"planetSearch\" id=\"planetSearch\" placeholder=\"Enter planet name\">\n     </div>\n"
+                },
+                {
+                    "date": 1689627017002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,13 @@\n   <link rel=\"stylesheet\" href=\"style.css\">\n   <script defer src=\"index.js\"></script>\n </head>\n <body>\n+  <div class=\"background-video\">\n+    <video autoplay loop muted>\n+      <source src=\"assets/addis_app.mp4\" type=\"video/mp4\">\n+    </video>\n+  </div>\n   <h1>Addis' Galactic Flights to the Stars (Wars)</h1>\n   <form id=\"searchForm\">\n     <h2 id=\"searchPlanet\">Search For Flights To Your Desired Planet Here:</h2>\n     <div class=\"name\">\n"
+                }
+            ],
+            "date": 1689614985285,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Addis' Galactic Flight</title>\n    <script defer src=\"index.js\"></script>\n    <link rel=\"stylesheet\" href=\"style.css\"/>\n  </head>\n  <body>\n    <h1>Addis' Galactic Flights to the Stars (wars)</h1>\n      <form id=\"searchForm\">\n        <h2>Search For Flights To Your Desired Planet Here:</h2>\n       <div class=\"name\">\n              <label for=\"planetSearch\"> Planet Name</label>\n              <input type=\"text\" name=\"planetSearch\" id=\"planetSearch\" placeholder=\"type plabnet here\"/>\n        </div>\n        <div for=\"planetInfo\" id=\"planetInfo\">\n\n        </div>\n        <div for=\"planetImage\" id=\"planetImage\">\n          <img id=\"planetImage\" src=\"assets/placeholder.jpg\" alt=\"Planet Image\">\n        </div>\n        <div class=\"buttons\">\n          <button type=\"submit\" id=\"searchButton\">Search</button>\n          <button type=\"reset\" id=\"resetButton\">Reset</button>\n        </div>  \n    </form>\n   <section class=\"planet-section\">\n   </section>\n\n  </body>\n</html>\n"
+        }
+    ]
+}

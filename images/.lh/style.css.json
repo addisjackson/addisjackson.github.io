@@ -1,0 +1,86 @@
+{
+    "sourceFile": "style.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1689623463784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689623491887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,6 @@\n body {\n   background-image: url=\"assets/APP.mp4\";\n   background-repeat: no-repeat;\n   background-size: cover;\n-  align: center;\n+  align-items: center;\n }\n"
+                },
+                {
+                    "date": 1689625191089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,81 @@\n-table {\n-    border-collapse: collapse;\n-    width: 100%;\n-  }\n-  \n-  th, td {\n-    padding: 8px;\n-    text-align: left;\n-    border-bottom: 1px solid #ddd;\n-  }\n-  \n-  th {\n-    background-color: #f2f2f2;\n-  }\n-  \n-  .hidden {\n-    display: none;\n-  }\n-  \n+/* style.css */\n+\n body {\n-  background-image: url=\"assets/APP.mp4\";\n-  background-repeat: no-repeat;\n-  background-size: cover;\n+  font-family: Arial, sans-serif;\n+  margin: 0;\n+  padding: 20px;\n+}\n+\n+h1 {\n+  text-align: center;\n+}\n+\n+form {\n+  margin-bottom: 20px;\n+}\n+\n+.name {\n+  display: flex;\n   align-items: center;\n+  margin-bottom: 10px;\n }\n+\n+label {\n+  margin-right: 10px;\n+}\n+\n+.buttons {\n+  display: flex;\n+  justify-content: center;\n+}\n+\n+button {\n+  margin: 0 5px;\n+  padding: 8px 16px;\n+  border: none;\n+  background-color: #333;\n+  color: #fff;\n+  cursor: pointer;\n+}\n+\n+.planet-section {\n+  margin-top: 20px;\n+}\n+\n+.planet-container {\n+  display: flex;\n+  align-items: flex-start;\n+}\n+\n+.planet-image {\n+  flex: 1;\n+  margin-right: 20px;\n+}\n+\n+.planet-info {\n+  flex: 2;\n+}\n+\n+.planetName {\n+  font-size: 24px;\n+  font-weight: bold;\n+}\n+\n+.planetInfo {\n+  margin-top: 10px;\n+}\n+\n+img {\n+  max-width: 100%;\n+  height: auto;\n+}\n+\n+.planetError {\n+  color: red;\n+  text-align: center;\n+}\n+\n+.errorText {\n+  font-style: italic;\n+}\n+ \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1689625273369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,81 +1,25 @@\n-/* style.css */\n-\n+table {\n+    border-collapse: collapse;\n+    width: 100%;\n+  }\n+  \n+  th, td {\n+    padding: 8px;\n+    text-align: left;\n+    border-bottom: 1px solid #ddd;\n+  }\n+  \n+  th {\n+    background-color: #f2f2f2;\n+  }\n+  \n+  .hidden {\n+    display: none;\n+  }\n+  \n body {\n-  font-family: Arial, sans-serif;\n-  margin: 0;\n-  padding: 20px;\n-}\n-\n-h1 {\n-  text-align: center;\n-}\n-\n-form {\n-  margin-bottom: 20px;\n-}\n-\n-.name {\n-  display: flex;\n+  background-image: url=\"assets/APP.mp4\";\n+  background-repeat: no-repeat;\n+  background-size: cover;\n   align-items: center;\n-  margin-bottom: 10px;\n }\n-\n-label {\n-  margin-right: 10px;\n-}\n-\n-.buttons {\n-  display: flex;\n-  justify-content: center;\n-}\n-\n-button {\n-  margin: 0 5px;\n-  padding: 8px 16px;\n-  border: none;\n-  background-color: #333;\n-  color: #fff;\n-  cursor: pointer;\n-}\n-\n-.planet-section {\n-  margin-top: 20px;\n-}\n-\n-.planet-container {\n-  display: flex;\n-  align-items: flex-start;\n-}\n-\n-.planet-image {\n-  flex: 1;\n-  margin-right: 20px;\n-}\n-\n-.planet-info {\n-  flex: 2;\n-}\n-\n-.planetName {\n\\ No newline at end of file\n-  font-size: 24px;\n-  font-weight: bold;\n-}\n-\n-.planetInfo {\n-  margin-top: 10px;\n-}\n-\n-img {\n-  max-width: 100%;\n-  height: auto;\n-}\n-\n-.planetError {\n-  color: red;\n-  text-align: center;\n-}\n-\n-.errorText {\n-  font-style: italic;\n-}\n- \n"
+                },
+                {
+                    "date": 1689626037796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,80 @@\n-table {\n-    border-collapse: collapse;\n-    width: 100%;\n-  }\n-  \n-  th, td {\n-    padding: 8px;\n-    text-align: left;\n-    border-bottom: 1px solid #ddd;\n-  }\n-  \n-  th {\n-    background-color: #f2f2f2;\n-  }\n-  \n-  .hidden {\n-    display: none;\n-  }\n-  \n+/* style.css */\n+\n body {\n-  background-image: url=\"assets/APP.mp4\";\n-  background-repeat: no-repeat;\n-  background-size: cover;\n+  font-family: Arial, sans-serif;\n+  margin: 0;\n+  padding: 20px;\n+}\n+\n+h1 {\n+  text-align: center;\n+}\n+\n+form {\n+  margin-bottom: 20px;\n+}\n+\n+.name {\n+  display: flex;\n   align-items: center;\n+  margin-bottom: 10px;\n }\n+\n+label {\n+  margin-right: 10px;\n+}\n+\n+.buttons {\n+  display: flex;\n+  justify-content: center;\n+}\n+\n+button {\n+  margin: 0 5px;\n+  padding: 8px 16px;\n+  border: none;\n+  background-color: #333;\n+  color: #fff;\n+  cursor: pointer;\n+}\n+\n+.planet-section {\n+  margin-top: 20px;\n+}\n+\n+.planet-container {\n+  display: flex;\n+  align-items: flex-start;\n+}\n+\n+.planet-image {\n+  flex: 1;\n+  margin-right: 20px;\n+}\n+\n+.planet-info {\n+  flex: 2;\n+}\n+\n+.planetName {\n+  font-size: 24px;\n+  font-weight: bold;\n+}\n+\n+.planetInfo {\n+  margin-top: 10px;\n+}\n+\n+img {\n+  max-width: 100%;\n+  height: auto;\n+}\n+\n+.planetError {\n+  color: red;\n+  text-align: center;\n+}\n+\n+.errorText {\n+  font-style: italic;\n+}\n"
+                },
+                {
+                    "date": 1689626253705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,12 @@\n   display: flex;\n   justify-content: center;\n }\n \n+h2 #searchPlanet {\n+  text-align: center;\n+}\n+\n button {\n   margin: 0 5px;\n   padding: 8px 16px;\n   border: none;\n"
+                },
+                {
+                    "date": 1689626285591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   display: flex;\n   justify-content: center;\n }\n \n-h2 #searchPlanet {\n+#searchPlanet {\n   text-align: center;\n }\n \n button {\n"
+                },
+                {
+                    "date": 1689627280843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,12 @@\n   background-color: #333;\n   color: #fff;\n   cursor: pointer;\n }\n+.background-video {\n+  background-repeat: no-repeat;\n+  background-size: cover;\n+}\n \n .planet-section {\n   margin-top: 20px;\n }\n"
+                },
+                {
+                    "date": 1689627333288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,9 @@\n }\n .background-video {\n   background-repeat: no-repeat;\n   background-size: cover;\n+  background-position: center;\n }\n \n .planet-section {\n   margin-top: 20px;\n"
+                },
+                {
+                    "date": 1689627591982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,16 @@\n body {\n   font-family: Arial, sans-serif;\n   margin: 0;\n   padding: 20px;\n+  overflow: hidden;\n }\n \n h1 {\n   text-align: center;\n-}\n+  position: relative;\n+  z-index: 1;\n+  color: #fff; \n \n form {\n   margin-bottom: 20px;\n }\n@@ -44,8 +47,15 @@\n .background-video {\n   background-repeat: no-repeat;\n   background-size: cover;\n   background-position: center;\n+  position: fixed;\n+  top: 0;\n+  left: 0;\n+  width: 100%;\n+  height: 100%;\n+  z-index: -1;\n+  overflow: hidden;\n }\n \n .planet-section {\n   margin-top: 20px;\n@@ -86,4 +96,20 @@\n \n .errorText {\n   font-style: italic;\n }\n+\n+video {\n+  width: 100%;\n+  height: 100%;\n+  object-fit: cover;\n+  opacity: 0.7; /* Adjust the opacity as desired */\n+}\n+\n+h1 {\n+  text-align: center;\n+  position: relative;\n+  z-index: 1;\n+  color: #fff; /* Adjust the text color to be visible against the video */\n+}\n+\n+/* Rest of your existing CSS styles */\n"
+                },
+                {
+                    "date": 1689628499577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n   text-align: center;\n   position: relative;\n   z-index: 1;\n   color: #fff; \n+}\n \n form {\n   margin-bottom: 20px;\n }\n@@ -110,6 +111,4 @@\n   position: relative;\n   z-index: 1;\n   color: #fff; /* Adjust the text color to be visible against the video */\n }\n-\n-/* Rest of your existing CSS styles */\n"
+                },
+                {
+                    "date": 1689628726173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n body {\n   font-family: Arial, sans-serif;\n   margin: 0;\n   padding: 20px;\n-  overflow: hidden;\n }\n \n h1 {\n   text-align: center;\n"
+                },
+                {
+                    "date": 1689628810088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,9 @@\n }\n \n #searchPlanet {\n   text-align: center;\n+  align-items: center;\n }\n \n button {\n   margin: 0 5px;\n"
+                },
+                {
+                    "date": 1689628850267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,8 +59,9 @@\n }\n \n .planet-section {\n   margin-top: 20px;\n+  align-content: center;\n }\n \n .planet-container {\n   display: flex;\n"
+                },
+                {
+                    "date": 1689628888581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\n \n h1 {\n   text-align: center;\n-  position: relative;\n+  position: center;\n   z-index: 1;\n   color: #fff; \n }\n \n"
+                },
+                {
+                    "date": 1689629062622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,122 @@\n+/* style.css */\n+\n+body {\n+  font-family: Arial, sans-serif;\n+  margin: 0;\n+  padding: 20px;\n+}\n+\n+h1 {\n+  text-align: center;\n+  position: center;\n+  z-index: 1;\n+  color: #fff; \n+}\n+\n+form {\n+  margin-bottom: 20px;\n+}\n+\n+.name {\n+  display: flex;\n+  align-items: center;\n+  margin-bottom: 10px;\n+}\n+\n+label {\n+  margin-right: 10px;\n+}\n+\n+.buttons {\n+  display: flex;\n+  justify-content: center;\n+}\n+\n+#searchPlanet {\n+  text-align: center;\n+  align-items: center;\n+}\n+\n+button {\n+  margin: 0 5px;\n+  padding: 8px 16px;\n+  border: none;\n+  background-color: #333;\n+  color: #fff;\n+  cursor: pointer;\n+}\n+.background-video {\n+  background-repeat: no-repeat;\n+  background-size: cover;\n+  background-position: center;\n+  position: fixed;\n+  top: 0;\n+  left: 0;\n+  width: 100%;\n+  height: 100%;\n+  z-index: -1;\n+  overflow: hidden;\n+}\n+\n+.planet-section {\n+  align-content: center;\n+  margin-top: 20px;\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  justify-content: center;\n+  height: 100vh;\n+  text-align: center;\n+}\n+\n+\n+.planet-container {\n+  display: flex;\n+  align-items: flex-start;\n+}\n+\n+.planet-image {\n+  flex: 1;\n+  margin-right: 20px;\n+}\n+\n+.planet-info {\n+  flex: 2;\n+}\n+\n+.planetName {\n+  font-size: 24px;\n+  font-weight: bold;\n+}\n+\n+.planetInfo {\n+  margin-top: 10px;\n+}\n+\n+img {\n+  max-width: 100%;\n+  height: auto;\n+}\n+\n+.planetError {\n+  color: red;\n+  text-align: center;\n+}\n+\n+.errorText {\n+  font-style: italic;\n+}\n+\n+video {\n+  width: 100%;\n+  height: 100%;\n+  object-fit: cover;\n+  opacity: 0.7; /* Adjust the opacity as desired */\n+}\n+\n+h1 {\n+  text-align: center;\n+  position: relative;\n+  z-index: 1;\n+  color: #fff; /* Adjust the text color to be visible against the video */\n+}\n"
+                },
+                {
+                    "date": 1689629152891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,124 +68,16 @@\n   height: 100vh;\n   text-align: center;\n }\n \n-\n-.planet-container {\n-  display: flex;\n-  align-items: flex-start;\n-}\n-\n-.planet-image {\n-  flex: 1;\n-  margin-right: 20px;\n-}\n-\n-.planet-info {\n-  flex: 2;\n-}\n-\n-.planetName {\n-  font-size: 24px;\n-  font-weight: bold;\n-}\n-\n-.planetInfo {\n-  margin-top: 10px;\n-}\n-\n-img {\n-  max-width: 100%;\n-  height: auto;\n-}\n-\n-.planetError {\n-  color: red;\n-  text-align: center;\n-}\n-\n-.errorText {\n-  font-style: italic;\n-}\n-\n-video {\n-  width: 100%;\n-  height: 100%;\n-  object-fit: cover;\n-  opacity: 0.7; /* Adjust the opacity as desired */\n-}\n-\n-h1 {\n-  text-align: center;\n-  position: relative;\n-  z-index: 1;\n-  color: #fff; /* Adjust the text color to be visible against the video */\n-}\n-/* style.css */\n-\n-body {\n-  font-family: Arial, sans-serif;\n-  margin: 0;\n-  padding: 20px;\n-}\n-\n-h1 {\n-  text-align: center;\n-  position: center;\n-  z-index: 1;\n-  color: #fff; \n-}\n-\n-form {\n-  margin-bottom: 20px;\n-}\n-\n .name {\n   display: flex;\n   align-items: center;\n+  justify-content: center;\n   margin-bottom: 10px;\n }\n \n-label {\n-  margin-right: 10px;\n-}\n \n-.buttons {\n-  display: flex;\n-  justify-content: center;\n-}\n-\n-#searchPlanet {\n-  text-align: center;\n-  align-items: center;\n-}\n-\n-button {\n-  margin: 0 5px;\n-  padding: 8px 16px;\n-  border: none;\n-  background-color: #333;\n-  color: #fff;\n-  cursor: pointer;\n-}\n-.background-video {\n-  background-repeat: no-repeat;\n-  background-size: cover;\n-  background-position: center;\n-  position: fixed;\n-  top: 0;\n-  left: 0;\n-  width: 100%;\n-  height: 100%;\n-  z-index: -1;\n-  overflow: hidden;\n-}\n-\n-.planet-section {\n-  margin-top: 20px;\n-  align-content: center;\n-}\n-\n .planet-container {\n   display: flex;\n   align-items: flex-start;\n }\n"
+                },
+                {
+                    "date": 1689629221203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,122 @@\n+/* style.css */\n+\n+body {\n+  font-family: Arial, sans-serif;\n+  margin: 0;\n+  padding: 20px;\n+}\n+\n+h1 {\n+  text-align: center;\n+  position: center;\n+  z-index: 1;\n+  color: #fff; \n+}\n+\n+form {\n+  margin-bottom: 20px;\n+}\n+\n+.name {\n+  display: flex;\n+  align-items: center;\n+  margin-bottom: 10px;\n+  justify-content: center;\n+}\n+\n+label {\n+  margin-right: 10px;\n+}\n+\n+.buttons {\n+  display: flex;\n+  justify-content: center;\n+}\n+\n+#searchPlanet {\n+  text-align: center;\n+  align-items: center;\n+}\n+\n+button {\n+  margin: 0 5px;\n+  padding: 8px 16px;\n+  border: none;\n+  background-color: #333;\n+  color: #fff;\n+  cursor: pointer;\n+}\n+.background-video {\n+  background-repeat: no-repeat;\n+  background-size: cover;\n+  background-position: center;\n+  position: fixed;\n+  top: 0;\n+  left: 0;\n+  width: 100%;\n+  height: 100%;\n+  z-index: -1;\n+  overflow: hidden;\n+}\n+\n+.planet-section {\n+  align-content: center;\n+  margin-top: 20px;\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  justify-content: center;\n+  height: 100vh;\n+  text-align: center;\n+}\n+\n+.planet-container {\n+  display: flex;\n+  align-items: flex-start;\n+}\n+\n+.planet-image {\n+  flex: 1;\n+  margin-right: 20px;\n+}\n+\n+.planet-info {\n+  flex: 2;\n+}\n+\n+.planetName {\n+  font-size: 24px;\n+  font-weight: bold;\n+}\n+\n+.planetInfo {\n+  margin-top: 10px;\n+}\n+\n+img {\n+  max-width: 100%;\n+  height: auto;\n+}\n+\n+.planetError {\n+  color: red;\n+  text-align: center;\n+}\n+\n+.errorText {\n+  font-style: italic;\n+}\n+\n+video {\n+  width: 100%;\n+  height: 100%;\n+  object-fit: cover;\n+  opacity: 0.7; /* Adjust the opacity as desired */\n+}\n+\n+h1 {\n+  text-align: center;\n+  position: relative;\n+  z-index: 1;\n+  color: #fff; /* Adjust the text color to be visible against the video */\n+}\n"
+                }
+            ],
+            "date": 1689623463784,
+            "name": "Commit-0",
+            "content": "table {\n    border-collapse: collapse;\n    width: 100%;\n  }\n  \n  th, td {\n    padding: 8px;\n    text-align: left;\n    border-bottom: 1px solid #ddd;\n  }\n  \n  th {\n    background-color: #f2f2f2;\n  }\n  \n  .hidden {\n    display: none;\n  }\n  \nbody {\n  background-image: url=\"assets/APP.mp4\";\n  background-repeat: no-repeat;\n  background-size: cover;\n  align: center;\n}\n"
+        }
+    ]
+}

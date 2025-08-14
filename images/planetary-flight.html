@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planetary Flight Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="planetary-flight-bg">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a class="active" href="planetary-flight.html">Book Flight</a>
+    <a href="booked-flights.html">Booked Flights</a>
+  </nav>
+  <button class="booked-flights-btn" onclick="window.location.href='booked-flights.html'">View Booked Flights</button>
+
+  <!-- Header / Branding -->
+  <header class="flight-header">
+    <div class="company-branding">
+      <img src="assets/r2d2.gif" alt="Addis Galactic Logo" class="company-logo" />
+      <div class="company-title-block">
+        <h1 class="company-title">Addis' Galactic Flights</h1>
+        <div class="company-motto">"To the stars and beyond, with comfort and style."</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quick link to booked flights -->
+  
+
+  <main>
+    <!-- Destination summary (destination text is set via query param by JS) -->
+    <section id="flight-info">
+      <h2>Flight Information</h2>
+      <p><strong>From:</strong> Earth</p>
+      <p><strong>Destination:</strong> <span id="destination">Loading…</span></p>
+    </section>
+
+    <!-- Booking form -->
+    <section id="booking-form">
+      <h2>Book Your Flight</h2>
+      <form id="flightBookingForm">
+        <!-- Primary passenger -->
+        <label for="passengerName">Passenger Name:</label>
+        <input type="text" id="passengerName" name="passengerName" required /><br /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="bags">Number of Bags:</label>
+        <input type="number" id="bags" name="bags" min="0" max="10" value="0" required /><br /><br />
+
+        <!-- Add Guest Button and Modal -->
+        <button type="button" id="addGuestBtn">Add Guest</button>
+        <div id="guest-modal" class="modal" style="display:none;">
+          <div class="modal-content">
+            <span class="close" id="closeGuestModal">&times;</span>
+            <h3>Add Guest</h3>
+            <label for="guestName">Name:</label>
+            <input type="text" id="guestName" name="guestName" required><br>
+            <label for="guestEmail">Email:</label>
+            <input type="email" id="guestEmail" name="guestEmail" required><br>
+            <label for="guestBags">Number of Bags:</label>
+            <input type="number" id="guestBags" name="guestBags" min="0" max="10" value="0" required><br><br>
+            <button type="button" id="saveGuestBtn">Add Guest</button>
+          </div>
+        </div>
+
+        <!-- Airline radios (must match keys in JS: StarJet, HyperSpaceX, Corellian Express, Rebel Wings) -->
+        <div id="airline-radio-group" class="airline-radio-group">
+          <span class="airline-label" style="color:#fff;font-weight:bold;">Choose Airline:</span><br />
+          <label class="airline-radio">
+            <input type="radio" name="airline" value="StarJet" checked />
+            <img src="assets/r2d2.gif" alt="StarJet" class="airline-logo" />
+            StarJet
+          </label>
+          <label class="airline-radio">
+            <input type="radio" name="airline" value="HyperSpaceX" />
+            <img src="assets/enter-the-force.gif" alt="HyperSpaceX" class="airline-logo" />
+            HyperSpaceX
+          </label>
+          <label class="airline-radio">
+            <input type="radio" name="airline" value="Corellian Express" />
+            <img src="assets/party.png" alt="Corellian Express" class="airline-logo" />
+            Corellian Express
+          </label>
+          <label class="airline-radio">
+            <input type="radio" name="airline" value="Rebel Wings" />
+            <img src="assets/r2d2.gif" alt="Rebel Wings" class="airline-logo" />
+            Rebel Wings
+          </label>
+        </div>
+
+        <!-- JS fills these dynamically -->
+        <div id="dynamic-flight-options"></div>
+        <div id="dynamic-layovers"></div>
+
+        <!-- Class / price tier (JS reads name="price" and parses first word) -->
+        <div>
+          <label style="display:block;margin-top:8px;">Choose Price Tier:</label>
+          <label><input type="radio" name="price" value="Economy - 500 Credits" checked /> Economy - 500 Credits</label><br />
+          <label><input type="radio" name="price" value="Business - 1200 Credits" /> Business - 1200 Credits</label><br />
+          <label><input type="radio" name="price" value="First - 3000 Credits" /> First Class - 3000 Credits</label>
+        </div>
+
+        <!-- Departure -->
+        <label for="departure" style="display:block;margin-top:12px;">Departure Time:</label>
+        <input type="datetime-local" id="departure" name="departure" required /><br /><br />
+
+        <!-- Running total (JS updates this) -->
+        <div id="dynamic-price" style="margin:8px 0 12px 0; font-weight:bold; color:#a67c52;">Total Price: 0 Credits</div>
+
+        <!-- Guests table (JS populates as guests are added) -->
+        <section id="guests-section" style="display:none;">
+          <h2>Guests</h2>
+          <table id="guests-table" class="manifest-table" style="width:100%;margin-bottom:24px;">
+            <thead>
+              <tr><th>Name</th><th>Email</th><th>Bags</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              <!-- Guests will be rendered here -->
+            </tbody>
+          </table>
+        </section>
+
+        <button type="submit">Book Flight</button>
+      </form>
+    </section>
+
+    <!-- Flight List and Manifest (shown after booking) -->
+    <section id="flight-list-section" style="display:none;">
+      <h2>Flight List</h2>
+      <table id="flight-list-table" class="flight-details-table" style="width:100%;cursor:pointer;">
+        <thead>
+          <tr><th>Airline</th><th>Logo</th><th>Flight #</th><th>Route</th><th>Layover</th><th>Destination</th><th>Departure</th><th>Actions</th></tr>
+        </thead>
+        <tbody>
+          <!-- Flight info will be rendered here -->
+        </tbody>
+      </table>
+    </section>
+    <section id="flight-manifest-section" style="display:none;">
+      <h2>Flight Manifest</h2>
+      <table id="manifest-table" class="manifest-table" style="width:100%;">
+        <thead>
+          <tr><th>Name</th><th>Email</th><th>Bags</th></tr>
+        </thead>
+        <tbody>
+          <!-- Manifest will be rendered here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Addis Galactic Flights</p>
+  </footer>
+
+  <!-- App script -->
+  <script src="planetary-flight.js"></script>
+</body>
+</html>

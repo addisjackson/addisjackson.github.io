@@ -1,0 +1,81 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.planet-section {
+  margin-top: 20px;
+}
+
+.planet-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.planet-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.planet-info {
+  flex: 2;
+}
+
+.planetName {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.planetInfo {
+  margin-top: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.planetError {
+  color: red;
+  text-align: center;
+}
+
+.errorText {
+  font-style: italic;
+}
+ 

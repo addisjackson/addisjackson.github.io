@@ -1,0 +1,22 @@
+{
+    "sourceFile": ".vscode/settings.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1689623507349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689628533611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n {\n-    \"liveCoder.settings.port\": 5501\n+    \"liveCoder.settings.port\": 5503,\n+    \"liveServer.settings.port\": 5501\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1689623507349,
+            "name": "Commit-0",
+            "content": "{\n    \"liveCoder.settings.port\": 5501\n}"
+        }
+    ]
+}

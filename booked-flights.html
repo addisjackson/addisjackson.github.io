@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booked Flights</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🚀 Space Travel Agency</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planetary-flights.html">Planetary Flights</a></li>
+        <li><a href="booked-flights.html" class="active">Booked Flights</a></li>
+      </ul>
+    </div>
+  </nav>
+  <button class="booked-flights-btn" onclick="window.location.href='booked-flights.html'">View Booked Flights</button>
+
+  <!-- Page Title -->
+  <header class="page-header">
+    <h1>📋 Your Booked Flights</h1>
+    <p>Below are all your booked flights and their passenger manifests.</p>
+  </header>
+
+  <!-- Booked Flights List -->
+  <main>
+    <section id="booked-flights-section">
+      <div id="booked-flights-list"></div>
+    </section>
+  </main>
+
+  <!-- JS Script -->
+  <script src="booked-flights.js"></script>
+</body>
+</html>
