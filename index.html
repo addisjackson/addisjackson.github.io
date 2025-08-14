@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Addis Jackson - Projects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #dcdcdc;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    ul.project-list {
+      list-style: none;
+      padding: 0;
+    }
+    ul.project-list li {
+      background: white;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    ul.project-list li:hover {
+      transform: scale(1.02);
+    }
+    ul.project-list a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Addis Jackson</h1>
+    <p>Developer | Creator | Innovator</p>
+  </header>
+
+  <main>
+    <h2>Deployed Projects</h2>
+    <ul class="project-list" id="projectList">
+      <!-- Projects will be added here -->
+    </ul>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Addis Jackson. All rights reserved.
+  </footer>
+
+  <script>
+    const projects = [
+      "planetary-flights",
+      "space-tours",
+      "galaxy-explorer",
+      "weather-dashboard"
+      // Add more project folder names here
+    ];
+
+    const projectList = document.getElementById("projectList");
+    projects.forEach(name => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = `https://addisjackson.github.io/${name}/`;
+      a.textContent = name.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      li.appendChild(a);
+      projectList.appendChild(li);
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
