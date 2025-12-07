@@ -84,19 +84,19 @@
 
   <script>
     const projects = [
-      "planetary-flights",
-      "space-tours",
-      "galaxy-explorer",
-      "weather-dashboard"
+      { folder: "captains_logs", display: "Captains Logs" },
+      { folder: "paradise-nursery", display: "Paradise Nursery" },
+      { folder: "Conference_Expense_planner", display: "Conference Expense Planner" },
+      { folder: "galaxy_flights", display: "Galaxy Flights" }
       // Add more project folder names here
     ];
 
     const projectList = document.getElementById("projectList");
-    projects.forEach(name => {
+    projects.forEach(project => {
       const li = document.createElement("li");
       const a = document.createElement("a");
-      a.href = `https://addisjackson.github.io/${name}/`;
-      a.textContent = name.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      a.href = `https://addisjackson.github.io/${project.folder}/`;
+      a.textContent = project.display;
       li.appendChild(a);
       projectList.appendChild(li);
     });
